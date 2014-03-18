@@ -1,0 +1,197 @@
+%h1 Networking Lib Backend Documentation
+
+%p
+  This is a test API for Application Networking Clients. The API endpoints below is a comprehensive list of HTTP status codes and example data which the Networking Client should be able to handle.
+  
+%p
+  All endpoints can be tested from this page.
+
+%h2 Generic/shared API responses
+
+%p
+  Generic/shared API responses can be encountered independent of whatever request the Networking Client performs. The Networking Client should therefore always be prepared to handle these responses.
+
+.endpoint
+  %h3
+    User not signed in
+    = simple_form_for(:object, url: unauthorized_path, method: :get) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "GET #{unauthorized_path}"
+    %dt Status
+    %dd 401 Unauthorized
+  
+.endpoint
+  %h3
+    Insufficient user rights
+    = simple_form_for(:object, url: forbidden_path, method: :get) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "GET #{forbidden_path}"
+    %dt Status
+    %dd 403 Forbidden
+
+.endpoint
+  %h3
+    Not found
+    = simple_form_for(:object, url: not_found_path, method: :get) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "GET #{not_found_path}"
+    %dt Status
+    %dd 404 Not Found
+
+.endpoint
+  %h3
+    Bad Request
+    = simple_form_for(:object, url: generic_error_path, method: :get) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "GET #{generic_error_path}"
+    %dt Status
+    %dd 400 Bad Request
+
+.endpoint
+  %h3
+    Internal Server Error
+    = simple_form_for(:object, url: internal_error_path, method: :get) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "GET #{internal_error_path}"
+    %dt Status
+    %dd 500 Internal Server Error
+
+
+%h2 Find data
+
+%p
+  API responses when retrieving data.
+
+.endpoint
+  %h3
+    Get single object
+    = simple_form_for(:object, url: find_single_obect_path, method: :get) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "GET #{find_single_obect_path}"
+    %dt Status
+    %dd 200 OK
+
+.endpoint
+  %h3
+    Get multiple objects
+    = simple_form_for(:object, url: find_multiple_objects_path, method: :get) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "GET #{find_multiple_objects_path}"
+    %dt Status
+    %dd 200 OK
+
+
+%h2 Create data
+
+%p
+  API responses when creating data.
+
+.endpoint
+  %h3
+    Created single object
+    = simple_form_for(:object, url: create_single_object_path, method: :post) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "POST #{create_single_object_path}"
+    %dt Status
+    %dd 201 Created
+
+.endpoint
+  %h3
+    Required parameters missing
+    = simple_form_for(:object, url: create_bad_request_path, method: :post) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "POST #{create_bad_request_path}"
+    %dt Status
+    %dd 400 Bad Request
+
+.endpoint
+  %h3
+    Object validation failed
+    = simple_form_for(:object, url: create_unprocessable_entity_path, method: :post) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "POST #{create_unprocessable_entity_path}"
+    %dt Status
+    %dd 422 Unprocessable Entity
+
+
+%h2 Update data
+
+%p
+  API responses when updating data.
+
+.endpoint
+  %h3
+    Single object updated
+    = simple_form_for(:object, url: update_single_object_path, method: :put) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "PUT #{update_single_object_path}"
+    %dt Status
+    %dd 204 No Content
+
+.endpoint
+  %h3
+    Required parameters missing
+    = simple_form_for(:object, url: update_bad_request_path, method: :put) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "PUT #{update_bad_request_path}"
+    %dt Status
+    %dd 400 Bad Request
+
+.endpoint
+  %h3
+    Object validation failed
+    = simple_form_for(:object, url: update_unprocessable_entity_path, method: :put) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "PUT #{update_unprocessable_entity_path}"
+    %dt Status
+    %dd 422 Unprocessable Entity
+
+
+%h2 Delete data
+
+%p
+  API responses when deleting data.
+
+.endpoint
+  %h3
+    Single object deleted
+    = simple_form_for(:object, url: delete_single_object_path, method: :delete) do |f|
+      = f.submit("Test")
+  %dl
+    %dt Url
+    %dd= "DELETE #{delete_single_object_path}"
+    %dt Status
+    %dd 204 No Content
+
+
+
+
+
+
+
