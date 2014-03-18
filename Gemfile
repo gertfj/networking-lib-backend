@@ -15,6 +15,11 @@ gem 'haml-rails', '~> 0.5.3'
 # API
 gem 'jbuilder', '~> 1.2'
 
+group :assets do
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'uglifier', '>= 1.3.0'
+end
+
 group :development, :test do
   gem "better_errors"
   gem 'foreman'
