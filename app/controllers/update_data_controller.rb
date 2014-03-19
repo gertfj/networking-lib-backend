@@ -1,19 +1,15 @@
 class UpdateDataController < ApiController
   
   def single_object
-    render json: { status: "generic" }
+    respond_with_no_content
   end
   
   def bad_request
-    render json: { status: "bad_request" }
+    respond_with_param_missing
   end
   
   def unprocessable_entity
-    render json: { status: "unprocessable_entity" }
-  end
-  
-  def not_found
-    render json: { status: "not_found" }
+    respond_with_model_error
   end
   
 end

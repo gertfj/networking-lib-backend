@@ -1,7 +1,7 @@
-class UpdateDataController < ApiController
+class DeleteDataController < ApiController
   
   def single_object
-    render json: { status: "generic" }
+    respond_with_no_content
   end
   
 end

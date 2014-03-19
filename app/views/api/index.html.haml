@@ -15,7 +15,7 @@
   %h3
     User not signed in
     = simple_form_for(:object, url: unauthorized_path, method: :get) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "GET #{unauthorized_path}"
@@ -26,7 +26,7 @@
   %h3
     Insufficient user rights
     = simple_form_for(:object, url: forbidden_path, method: :get) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "GET #{forbidden_path}"
@@ -37,7 +37,7 @@
   %h3
     Not found
     = simple_form_for(:object, url: not_found_path, method: :get) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "GET #{not_found_path}"
@@ -48,7 +48,7 @@
   %h3
     Bad Request
     = simple_form_for(:object, url: generic_error_path, method: :get) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "GET #{generic_error_path}"
@@ -59,7 +59,7 @@
   %h3
     Internal Server Error
     = simple_form_for(:object, url: internal_error_path, method: :get) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "GET #{internal_error_path}"
@@ -76,7 +76,7 @@
   %h3
     Get single object
     = simple_form_for(:object, url: find_single_obect_path, method: :get) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "GET #{find_single_obect_path}"
@@ -87,7 +87,7 @@
   %h3
     Get multiple objects
     = simple_form_for(:object, url: find_multiple_objects_path, method: :get) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "GET #{find_multiple_objects_path}"
@@ -104,7 +104,7 @@
   %h3
     Created single object
     = simple_form_for(:object, url: create_single_object_path, method: :post) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "POST #{create_single_object_path}"
@@ -115,7 +115,7 @@
   %h3
     Required parameters missing
     = simple_form_for(:object, url: create_bad_request_path, method: :post) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "POST #{create_bad_request_path}"
@@ -126,7 +126,7 @@
   %h3
     Object validation failed
     = simple_form_for(:object, url: create_unprocessable_entity_path, method: :post) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "POST #{create_unprocessable_entity_path}"
@@ -143,7 +143,7 @@
   %h3
     Single object updated
     = simple_form_for(:object, url: update_single_object_path, method: :put) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "PUT #{update_single_object_path}"
@@ -154,7 +154,7 @@
   %h3
     Required parameters missing
     = simple_form_for(:object, url: update_bad_request_path, method: :put) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "PUT #{update_bad_request_path}"
@@ -165,7 +165,7 @@
   %h3
     Object validation failed
     = simple_form_for(:object, url: update_unprocessable_entity_path, method: :put) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "PUT #{update_unprocessable_entity_path}"
@@ -182,7 +182,7 @@
   %h3
     Single object deleted
     = simple_form_for(:object, url: delete_single_object_path, method: :delete) do |f|
-      = f.submit("Test")
+      = f.submit("Try it")
   %dl
     %dt Url
     %dd= "DELETE #{delete_single_object_path}"
