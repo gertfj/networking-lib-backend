@@ -3,6 +3,7 @@ ruby '2.0.0'
 
 gem 'puma', '2.8.1'
 gem 'rails', '4.0.2'
+gem 'pg', '~> 0.17.1'
 
 # Form generation
 gem 'simple_form', '~> 3.0.1'
@@ -13,7 +14,8 @@ gem 'jquery-ui-rails'
 gem 'haml-rails', '~> 0.5.3'
 
 # API
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 2.0.7'
+gem 'shp_api', path: "/Users/gert/Sites/shape/gems/shp_api"
 
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
@@ -21,6 +23,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem "require_reloader", "~> 0.2.0"
   gem "better_errors"
   gem 'foreman'
   gem 'debugger'

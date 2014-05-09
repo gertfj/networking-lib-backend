@@ -1,23 +1,23 @@
 class GenericController < ApiController
   
   def unauthorized
-    respond_with_unauthorized
+    ShpApi::JsonResponder.new(self).unauthorized
   end
   
   def forbidden
-    respond_with_forbidden
+    ShpApi::JsonResponder.new(self).forbidden
   end
   
   def not_found
-    respond_with_not_found
+    raise ActiveRecord::RecordNotFound
   end
   
   def generic_error
-    respond_with_error
+    ShpApi::JsonResponder.new(self).error
   end
   
   def internal_error
-    respond_with_exception
+    raise "Internal Error"
   end
   
 end

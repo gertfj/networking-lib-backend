@@ -1,7 +1,7 @@
 class DeleteDataController < ApiController
   
   def single_object
-    respond_with_no_content
+    ShpApi::JsonResponder.new(self).no_content
   end
   
 end
